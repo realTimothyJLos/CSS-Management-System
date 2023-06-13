@@ -101,6 +101,9 @@
     <Content Include="src\styles\ImportSiteVariations.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\styles\ImportTextDirectionCSS.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\utils\countryTextDirectionMap.js">
       <SubType>Code</SubType>
     </Content>

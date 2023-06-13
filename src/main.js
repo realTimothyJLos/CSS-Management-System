@@ -2,6 +2,7 @@ import importParentCSS from './styles/importParentCSS';
 import importSiteVariations from './styles/importSiteVariations';
 import importMobileWebVariations from './styles/importMobileWebVariations';
 import importAppVariations from './styles/importAppVariations';
+import importTextDirection from './ImportTextDirectionCSS.js';
 import ABManager from './ab-testing/ab-manager';
 import AzureStorageService from './azureStorage';
 import DatabaseService from './databaseConfigurations';
@@ -12,6 +13,9 @@ import './dynamicImages';
 
 // Import parent CSS
 importParentCSS();
+
+// Import Text Direction
+importTextDirection();
 
 // Import site variations
 importSiteVariations();

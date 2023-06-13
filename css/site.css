@@ -1,10 +1,5 @@
 /* Import text-direction-specific CSS files */
-@import url('./text-direction/ltr.css');
-@import url('./text-direction/rtl.css');
-@import url('./text-direction/btt.css');
-@import url('./text-direction/ttb.css');
-@import url('./text-direction/mongolian.css');
-@import url('./text-direction/bidirectional.css');
+@import url('./src/styles/ImportTextDirectionCSS.js');
 
 /* Components */
 
