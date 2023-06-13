@@ -1,0 +1,30 @@
+{
+  "name": "style-pack",
+  "version": "0.0.0",
+  "description": "StylePack",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.5",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.21.0",
+    "eslint-plugin-eslint-plugin": "^5.1.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2023,
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "dependencies": {
+    "@azure/identity": "^3.2.2",
+    "@azure/keyvault-secrets": "^4.7.0",
+    "@azure/storage-blob": "^12.14.0",
+    "mssql": "^9.1.1"
+  }
+}

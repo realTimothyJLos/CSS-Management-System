@@ -1,0 +1,31 @@
+/* writing-modes.css */
+
+/* LTR (Left-to-Right) */
+.text-direction.ltr {
+    /* Styles specific to LTR */
+}
+
+/* RTL (Right-to-Left) */
+.text-direction.rtl {
+    /* Styles specific to RTL */
+}
+
+/* TTB (Top-to-Bottom) */
+.text-direction.ttb {
+    /* Styles specific to TTB */
+}
+
+/* BTT (Bottom-to-Top) */
+.text-direction.btt {
+    /* Styles specific to BTT */
+}
+
+/* Mongolian */
+.text-direction.mongolian {
+    /* Styles specific to Mongolian script */
+}
+
+/* Bi-directional text */
+.text-direction.bidirectional {
+    /* Styles specific to bi-directional text */
+}
