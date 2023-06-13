@@ -35,7 +35,22 @@
     <Content Include="css\mobile-web.css">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="css\text-directions.css">
+    <Content Include="css\text-direction\bidirectional.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\text-direction\btt.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\text-direction\ltr.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\text-direction\mongolian.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\text-direction\rtl.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\text-direction\ttb.css">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\ab-testing\ab-manager.js">
@@ -100,6 +115,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="css\text-direction\" />
     <Folder Include="css\variants\mobile-variants\" />
     <Folder Include="css\variants\app-variants\" />
     <Folder Include="dist\" />

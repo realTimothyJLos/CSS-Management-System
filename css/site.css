@@ -1,3 +1,11 @@
+/* Import text-direction-specific CSS files */
+@import url('./text-direction/ltr.css');
+@import url('./text-direction/rtl.css');
+@import url('./text-direction/btt.css');
+@import url('./text-direction/ttb.css');
+@import url('./text-direction/mongolian.css');
+@import url('./text-direction/bidirectional.css');
+
 /* Components */
 
 /* Centered banner component */
@@ -20,7 +28,37 @@
     color: black;
 }
 
-/* Import text-direction.css styles */
-@import url('text-direction.css');
+/**
+ * Navigation
+ */
 
-/* Add any additional styles or overrides here */
+/* Navigation tabs */
+.nav-tabs {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Navigation tab links */
+.nav-link {
+    cursor: pointer;
+}
+
+    /* Active navigation tab link */
+    .nav-link.active {
+        background-color: blue;
+        color: white;
+    }
+
+/* Tab description */
+.tab-description {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+/* Display the tab description when its corresponding tab is active */
+.nav-link.active + .tab-description {
+    display: block;
+}

@@ -1,0 +1,26 @@
+/* Styles specific to RTL */
+.text-direction.rtl {
+    /* RTL styles */
+    /* Override styles from site.css for RTL */
+
+    /* Example overrides */
+    .center-banner {
+        text-align: right;
+    }
+
+    .pricing-calculator {
+        text-align: right;
+    }
+
+    .nav-tabs {
+        direction: rtl;
+    }
+
+    .nav-link {
+        text-align: right;
+    }
+
+    .tab-description {
+        text-align: right;
+    }
+}
