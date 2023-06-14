@@ -1,6 +1,15 @@
-// Import text-direction-specific SCSS files
+/**
+
+Navigation Styles
+*/
+
+// Import mixins for button styles
 @import '../mixins/_mixins';
+
+// Import text-direction-specific SCSS files
 @import './src/styles/ImportTextDirectionSCSS';
+
+// Import variables
 @import '../variables/_variables';
 
 // Navigation tabs
@@ -13,6 +22,7 @@
 .nav-link {
     cursor: pointer;
 
+    // Active navigation tab link
     &.active {
         @include button($nav-active-background-color);
         color: $nav-active-text-color;

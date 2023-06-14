@@ -35,28 +35,18 @@
     <Content Include="css\mobile-web.css">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="css\text-direction\bidirectional.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\text-direction\btt.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\text-direction\ltr.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\text-direction\mongolian.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\text-direction\rtl.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\text-direction\ttb.css">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="scss\app.scss" />
     <Content Include="scss\components\_navigation.scss" />
     <Content Include="scss\components\_pricing-calculator.scss" />
     <Content Include="scss\mixins\_mixins.scss" />
+    <Content Include="scss\mobile-web.scss" />
     <Content Include="scss\site.scss" />
+    <Content Include="scss\text-direction\_btt.scss" />
+    <Content Include="scss\text-direction\_bidrectional.scss" />
+    <Content Include="scss\text-direction\_ltr.scss" />
+    <Content Include="scss\text-direction\_mongolian.scss" />
+    <Content Include="scss\text-direction\_rtl.scss" />
+    <Content Include="scss\text-direction\_ttb.scss" />
     <Content Include="scss\variables\_variables.scss" />
     <Content Include="src\ab-testing\ab-manager.js">
       <SubType>Code</SubType>
@@ -123,15 +113,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\text-direction\" />
     <Folder Include="css\variants\mobile-variants\" />
     <Folder Include="css\variants\app-variants\" />
     <Folder Include="dist\" />
     <Folder Include="scss\" />
     <Folder Include="scss\ab-testing\" />
+    <Folder Include="scss\ab-testing\app-variants\" />
+    <Folder Include="scss\ab-testing\mobile-web-variants\" />
+    <Folder Include="scss\ab-testing\mixins-variants\" />
+    <Folder Include="scss\ab-testing\functions-variants\" />
     <Folder Include="scss\components\" />
     <Folder Include="scss\mixins\" />
     <Folder Include="scss\functions\" />
+    <Folder Include="scss\text-direction\" />
     <Folder Include="scss\variables\" />
     <Folder Include="src\ab-testing\" />
     <Folder Include="css\" />

@@ -1,21 +1,22 @@
 // Import component SCSS files
-@import 'components/pricing-calculator';
-@import 'components/navigation';
+@import 'components/pricing-calculator'; // Import the SCSS file for the pricing calculator component
+@import 'components/navigation'; // Import the SCSS file for the navigation component
 
 // Import text-direction-specific SCSS files
-@import './src/styles/ImportTextDirectionSCSS';
-@import '_variables';
+@import './src/styles/ImportTextDirectionSCSS'; // Import SCSS files specific to text direction styles
+@import '_variables'; // Import the SCSS file for variables
 
+/**
+Base
+*/
 
-// Base 
 
 // Centered banner component
 .center-banner {
-    background: linear-gradient(to right, white, $banner-background-color);
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(to right, white, $banner-background-color); // Apply a linear gradient background to the centered banner
+    text-align: center; // Center-align the text within the centered banner
+    padding: 20px; // Add padding to the centered banner
+    display: flex; // Use flexbox for centering items horizontally and vertically
+    align-items: center; // Center-align the items vertically within the centered banner
+    justify-content: center; // Center-align the items horizontally within the centered banner
 }
-
