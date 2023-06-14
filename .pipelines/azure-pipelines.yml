@@ -1,0 +1,63 @@
+# azure-pipelines.yml
+
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildVersion: $(Build.BuildNumber)
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm ci
+      npm run build
+    displayName: 'Install dependencies and build'
+
+  - script: |
+      export AZURE_SUBSCRIPTION_CONNECTION_STRING=$(node -p "require('../src/azureKeyVault.js').getSecretValue('AzureSubscriptionConnectionString')")
+      export AZURE_STORAGE_ACCOUNT_NAME=$(node -p "require('../src/azureKeyVault.js').getSecretValue('AzureStorageAccountName')")
+      export AZURE_BLOB_CONTAINER_NAME=$(node -p "require('../src/azureKeyVault.js').getSecretValue('AzureBlobContainerName')")
+      export AZURE_CDN_PROFILE_NAME=$(node -p "require('../src/azureKeyVault.js').getSecretValue('AzureCDNProfileName')")
+      export AZURE_CDN_ENDPOINT_NAME=$(node -p "require('../src/azureKeyVault.js').getSecretValue('AzureCDNEndpointName')")
+      export AZURE_RESOURCE_GROUP_NAME=$(node -p "require('../src/azureKeyVault.js').getSecretValue('ResourceGroupName')")
+    displayName: 'Retrieve Azure secrets from Key Vault'
+
+  - task: AzureFileCopy@4
+    inputs:
+      SourcePath: '$(System.DefaultWorkingDirectory)/dist'
+      azureSubscription: $(AZURE_SUBSCRIPTION_CONNECTION_STRING)
+      Destination: 'AzureBlob'
+      storage: $(AZURE_STORAGE_ACCOUNT_NAME)
+      ContainerName: $(AZURE_BLOB_CONTAINER_NAME)
+      CleanTargetBeforeCopy: true
+      Overwrite: true
+      TargetPath: '$(buildVersion)'
+    displayName: 'Copy files to Azure Blob Storage'
+
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: $(AZURE_SUBSCRIPTION_CONNECTION_STRING)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az cdn endpoint create --name $(AZURE_CDN_ENDPOINT_NAME) --origin $(AZURE_STORAGE_ACCOUNT_NAME).blob.core.windows.net/$(buildVersion) --profile-name $(AZURE_CDN_PROFILE_NAME) --resource-group $(AZURE_RESOURCE_GROUP_NAME)
+        az cdn endpoint enable-waf --name $(AZURE_CDN_ENDPOINT_NAME) --profile-name $(AZURE_CDN_PROFILE_NAME) --resource-group $(AZURE_RESOURCE_GROUP_NAME)
+    displayName: 'Configure Azure CDN'
+
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: $(AZURE_SUBSCRIPTION_CONNECTION_STRING)
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: |
+        az cdn endpoint purge --name $(AZURE_CDN_ENDPOINT_NAME) --profile-name $(AZURE_CDN_PROFILE_NAME) --resource-group $(AZURE_RESOURCE_GROUP_NAME) --content-paths '/*'
+    displayName: 'Purge Azure CDN cache'

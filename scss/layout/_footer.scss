@@ -1,0 +1,32 @@
+/* _footer.scss */
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__logo {
+    width: 100px;
+    height: auto;
+}
+
+.footer__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__menu-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer__menu-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer__menu-link:hover {
+    color: #ff0000;
+}

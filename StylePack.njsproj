@@ -29,6 +29,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include=".pipelines\azure-pipelines.yml" />
+    <Content Include=".stylelintrc.json" />
     <Content Include="css\app.css">
       <SubType>Code</SubType>
     </Content>
@@ -44,6 +46,8 @@
     <Content Include="scss\helper\_non-western.scss" />
     <Content Include="scss\helper\_text-helpers.scss" />
     <Content Include="scss\helper\_typography.scss" />
+    <Content Include="scss\layout\_footer.scss" />
+    <Content Include="scss\layout\_layout.scss" />
     <Content Include="scss\mixins\_mixins.scss" />
     <Content Include="scss\base\mobile-web.scss" />
     <Content Include="scss\base\site.scss" />
@@ -122,12 +126,14 @@
     <Folder Include="css\variants\mobile-variants\" />
     <Folder Include="css\variants\app-variants\" />
     <Folder Include="dist\" />
+    <Folder Include=".pipelines\" />
     <Folder Include="scss\" />
     <Folder Include="scss\ab-testing\" />
     <Folder Include="scss\ab-testing\app-variants\" />
     <Folder Include="scss\ab-testing\mobile-web-variants\" />
     <Folder Include="scss\ab-testing\mixins-variants\" />
     <Folder Include="scss\ab-testing\functions-variants\" />
+    <Folder Include="scss\ab-testing\site-variants\" />
     <Folder Include="scss\components\" />
     <Folder Include="scss\mixins\" />
     <Folder Include="scss\functions\" />
