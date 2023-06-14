@@ -1,0 +1,67 @@
+// Import any necessary dependencies or variables
+@import '../variables/_variables';
+@import '../mixins/_mixins';
+
+/* Slideout panel */
+#slideout-panel {
+    position: fixed;
+    top: 0;
+    right: $slideout-panel-hidden-position;
+    width: $slideout-panel-width;
+    height: 100%;
+    background-color: $slideout-panel-background-color;
+    @include slideout-panel-transition(right);
+    z-index: $slideout-panel-z-index;
+}
+
+.slideout-hidden {
+    right: $slideout-panel-hidden-position;
+}
+
+.slideout-panel-open {
+    right: 0;
+}
+
+/* Login options */
+#login-options {
+    background: linear-gradient(to right, $login-options-gradient-start, $login-options-gradient-end);
+    padding: $login-options-padding;
+    border-radius: $login-options-border-radius;
+    color: $login-options-text-color;
+}
+
+#login-options p {
+    font-size: $login-options-text-size;
+    margin-bottom: $login-options-text-margin-bottom;
+}
+
+#login-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#login-options li {
+    margin-bottom: $login-options-list-item-margin-bottom;
+}
+
+#login-options li a {
+    display: inline-block;
+    padding: $login-options-link-padding-vertical $login-options-link-padding-horizontal;
+    color: $login-options-link-color;
+    text-decoration: none;
+    border-radius: $login-options-link-border-radius;
+    background-color: $login-options-link-background-color;
+    @include login-options-link-transition(background-color);
+}
+
+/* Overlay styles */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $overlay-background-color;
+    z-index: $overlay-z-index;
+}

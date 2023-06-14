@@ -4,12 +4,34 @@
 
 // Import text-direction-specific SCSS files
 @import './src/styles/ImportTextDirectionSCSS'; // Import SCSS files specific to text direction styles
-@import '_variables'; // Import the SCSS file for variables
+@import '../variables/_variables'; // Import the SCSS file for variables
+@import '../mixins/'; // Import the SCSS file for mixins
+@import '../helper/_typography';
+@import '../helper/_text-helpers';
 
 /**
-Base
-*/
+ * Base Styles
+ */
 
+/* Set the base font size for the HTML element */
+html {
+    font-size: $base-font-size;
+
+    @media (min-width: 768px) {
+        font-size: $base-font-size + 2px;
+    }
+}
+
+/* Set the HTML element to have relative positioning and a minimum height of 100% */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Add a margin at the bottom of the body */
+body {
+    margin-bottom: 60px;
+}
 
 // Centered banner component
 .center-banner {
@@ -19,4 +41,5 @@ Base
     display: flex; // Use flexbox for centering items horizontally and vertically
     align-items: center; // Center-align the items vertically within the centered banner
     justify-content: center; // Center-align the items horizontally within the centered banner
+
 }

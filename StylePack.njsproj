@@ -35,12 +35,18 @@
     <Content Include="css\mobile-web.css">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="scss\app.scss" />
+    <Content Include="scss\base\app.scss" />
+    <Content Include="scss\components\_modal.scss" />
     <Content Include="scss\components\_navigation.scss" />
     <Content Include="scss\components\_pricing-calculator.scss" />
+    <Content Include="scss\components\_slideout.scss" />
+    <Content Include="scss\components\_video-player.scss" />
+    <Content Include="scss\helper\_non-western.scss" />
+    <Content Include="scss\helper\_text-helpers.scss" />
+    <Content Include="scss\helper\_typography.scss" />
     <Content Include="scss\mixins\_mixins.scss" />
-    <Content Include="scss\mobile-web.scss" />
-    <Content Include="scss\site.scss" />
+    <Content Include="scss\base\mobile-web.scss" />
+    <Content Include="scss\base\site.scss" />
     <Content Include="scss\text-direction\_btt.scss" />
     <Content Include="scss\text-direction\_bidrectional.scss" />
     <Content Include="scss\text-direction\_ltr.scss" />
@@ -125,6 +131,11 @@
     <Folder Include="scss\components\" />
     <Folder Include="scss\mixins\" />
     <Folder Include="scss\functions\" />
+    <Folder Include="scss\base\" />
+    <Folder Include="scss\helper\" />
+    <Folder Include="scss\layout\" />
+    <Folder Include="scss\themes\" />
+    <Folder Include="scss\vendor\" />
     <Folder Include="scss\text-direction\" />
     <Folder Include="scss\variables\" />
     <Folder Include="src\ab-testing\" />

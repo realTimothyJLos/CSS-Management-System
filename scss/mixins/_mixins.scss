@@ -1,5 +1,42 @@
+@import '../variables/_variables';
+
+// Mixin for applying an aspect ratio to an element
+@mixin aspect-ratio($width, $height) {
+    padding-bottom: percentage($height / $width);
+}
+
+// Mixin for modal popup 
+@mixin center-position {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// Mixin for creating a styled button
 @mixin button($background-color) {
     background-color: $background-color;
     padding: 10px;
     border-radius: 5px;
+}
+
+// Mixin for setting hover behavior on video player controls button
+@mixin video-player-controls-button-hover {
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Mixin for setting the aspect ratio of the video player
+@mixin video-player-aspect-ratio($aspect-ratio) {
+    padding-bottom: $aspect-ratio;
+}
+
+@mixin slideout-panel-transition($property) {
+    transition: $property $slideout-panel-transition-duration $slideout-panel-transition-timing-function;
+}
+
+@mixin login-options-link-transition($property) {
+    transition: $property $login-options-link-transition-duration $login-options-link-transition-timing-function;
 }

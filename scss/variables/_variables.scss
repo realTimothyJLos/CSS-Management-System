@@ -10,3 +10,44 @@ $nav-active-background-color: blue;
 
 // Text color for the active navigation tab
 $nav-active-text-color: white;
+
+// Overlay variables
+$overlay-background-color: rgba(0, 0, 0, 0.5);
+$overlay-z-index: 9999;
+
+// Modal variables
+$modal-background-color: #fff;
+$modal-border-radius: 4px;
+$modal-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+$modal-padding: 20px;
+$modal-title-font-size: 24px;
+$modal-title-margin-bottom: 10px;
+$modal-body-margin-bottom: 20px;
+$modal-footer-margin-top: 20px;
+$modal-footer-button-margin-left: 10px;
+$modal-z-index: 10000;
+
+// Slideout panel
+$slideout-panel-hidden-position: -300px;
+$slideout-panel-width: 300px;
+$slideout-panel-background-color: #f1f1f1;
+$slideout-panel-transition-duration: 0.3s;
+$slideout-panel-transition-timing-function: ease;
+$slideout-panel-z-index: 9999;
+
+// Login options
+$login-options-gradient-start: #2980b9;
+$login-options-gradient-end: #000000;
+$login-options-padding: 20px;
+$login-options-border-radius: 5px;
+$login-options-text-color: #ffffff;
+$login-options-text-size: 16px;
+$login-options-text-margin-bottom: 15px;
+$login-options-list-item-margin-bottom: 10px;
+$login-options-link-padding-vertical: 10px;
+$login-options-link-padding-horizontal: 20px;
+$login-options-link-color: #ffffff;
+$login-options-link-border-radius: 5px;
+$login-options-link-background-color: transparent;
+$login-options-link-transition-duration: 0.3s;
+$login-options-link-transition-timing-function: ease;
