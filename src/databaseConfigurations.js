@@ -1,8 +1,9 @@
 const sql = require('mssql');
 
 class DatabaseService {
-    constructor(getSecretValue) {
+    constructor(getSecretValue, getCountry) {
         this.getSecretValue = getSecretValue;
+        this.getCountry = getCountry;
         this.config = null;
     }
 
@@ -38,6 +39,7 @@ class DatabaseService {
                 folder: row.folder,
                 variation: row.variation,
                 image: row.image,
+                country: this.getCountry(), // Get the country code
             }));
 
             return dynamicImages;

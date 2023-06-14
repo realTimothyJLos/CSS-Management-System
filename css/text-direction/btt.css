@@ -1,5 +1,28 @@
-/* Styles specific to BTT */
+/* Styles specific to BTT (Bottom to Top) */
 .text-direction.btt {
     /* BTT styles */
     /* Override styles from site.css for BTT */
+
+    /* Example overrides */
+    .center-banner
+
+{
+    text-align: center;
+}
+
+.pricing-calculator {
+    text-align: center;
+}
+
+.nav-tabs {
+    /* Additional styles for BTT */
+}
+
+.nav-link {
+    /* Additional styles for BTT */
+}
+
+.tab-description {
+    /* Additional styles for BTT */
+}
 }

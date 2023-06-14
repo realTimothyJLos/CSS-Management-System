@@ -12,6 +12,8 @@
     "eslint": "^8.21.0",
     "eslint-plugin-eslint-plugin": "^5.1.0",
     "mini-css-extract-plugin": "^2.7.6",
+    "sass": "^1.63.3",
+    "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3"
   },
   "eslintConfig": {

@@ -1,0 +1,35 @@
+// Import text-direction-specific SCSS files
+@import '../mixins/_mixins';
+@import './src/styles/ImportTextDirectionSCSS';
+@import '../variables/_variables';
+
+// Navigation tabs
+.nav-tabs {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+// Navigation tab links
+.nav-link {
+    cursor: pointer;
+
+    &.active {
+        @include button($nav-active-background-color);
+        color: $nav-active-text-color;
+    }
+}
+
+
+// Tab description
+.tab-description {
+    text-align: center;
+    background-color: $nav-active-background-color;
+    color: $nav-active-text-color;
+    padding: 10px;
+    display: none;
+}
+
+// Display the tab description when its corresponding tab is active
+.nav-link.active + .tab-description {
+    display: block;
+}

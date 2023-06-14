@@ -1,5 +1,27 @@
-/* Styles specific to Mongolian script */
+/* Styles specific to Mongolian */
 .text-direction.mongolian {
     /* Mongolian styles */
     /* Override styles from site.css for Mongolian */
+    /* Example overrides */
+    .center-banner
+
+{
+    text-align: center;
+}
+
+.pricing-calculator {
+    text-align: center;
+}
+
+.nav-tabs {
+    /* Additional styles for Mongolian */
+}
+
+.nav-link {
+    /* Additional styles for Mongolian */
+}
+
+.tab-description {
+    /* Additional styles for Mongolian */
+}
 }

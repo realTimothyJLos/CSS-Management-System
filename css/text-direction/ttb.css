@@ -1,5 +1,27 @@
-/* Styles specific to TTB */
+/* Styles specific to TTB (Top to Bottom) */
 .text-direction.ttb {
     /* TTB styles */
     /* Override styles from site.css for TTB */
+    /* Example overrides */
+    .center-banner
+
+{
+    text-align: center;
+}
+
+.pricing-calculator {
+    text-align: center;
+}
+
+.nav-tabs {
+    /* Additional styles for TTB */
+}
+
+.nav-link {
+    /* Additional styles for TTB */
+}
+
+.tab-description {
+    /* Additional styles for TTB */
+}
 }

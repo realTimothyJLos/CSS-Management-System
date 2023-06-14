@@ -1,5 +1,26 @@
-/* Styles specific to bi-directional text */
+/* Styles specific to bidirectional */
 .text-direction.bidirectional {
-    /* Bi-directional text styles */
-    /* Override styles from site.css for bi-directional text */
+    /* Bidirectional styles */
+    /* Override styles from site.css for bidirectional */
+    /* Example overrides */
+    .center-banner {
+
+    text-align: center;
+}
+
+.pricing-calculator {
+    text-align: center;
+}
+
+.nav-tabs {
+    direction: rtl;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.tab-description {
+    text-align: center;
+}
 }
