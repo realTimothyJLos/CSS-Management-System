@@ -1,16 +1,20 @@
 # azure-pipelines.yml
 
+# Trigger the pipeline on changes in the master branch
 trigger:
   branches:
     include:
       - master
 
+# Use the latest Ubuntu image as the build agent
 pool:
   vmImage: 'ubuntu-latest'
 
+# Define variables
 variables:
-  buildVersion: $(Build.BuildNumber)
+  buildVersion: $(Build.BuildNumber)  # Use the build number as the version
 
+# Pipeline steps
 steps:
   - task: NodeTool@0
     inputs:

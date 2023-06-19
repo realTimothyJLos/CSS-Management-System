@@ -1,0 +1,7 @@
+// Breakpoint sizes
+$breakpoints: ( "small": 576px, "medium": 768px, "large": 992px, "extra-large": 1200px, );
+
+// Function to get breakpoint value
+@function breakpoint($name) {
+    @return map-get($breakpoints, $name);
+}

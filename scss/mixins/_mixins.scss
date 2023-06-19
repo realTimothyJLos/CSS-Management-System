@@ -1,24 +1,48 @@
 @import '../variables/_variables';
+@import '../functions/_function';
 
 // Mixin for applying an aspect ratio to an element
 @mixin aspect-ratio($width, $height) {
     padding-bottom: percentage($height / $width);
 }
 
-// Mixin for modal popup 
-@mixin center-position {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
 // Mixin for creating a styled button
 @mixin button($background-color) {
     background-color: $background-color;
     padding: 10px;
     border-radius: 5px;
+}
+
+// Media query mixin
+@mixin media-query($name) {
+    @media (min-width: breakpoint($name)) {
+        @content;
+    }
+}
+
+// Usage example
+.container {
+    width: 100%;
+
+    @include media-query('medium') {
+        width: 80%;
+    }
+
+    @include media-query('large') {
+        width: 60%;
+    }
+
+    @include media-query('extra-large') {
+        width: 40%;
+    }
+}
+
+
+// Media query mixin
+@mixin media-query($name) {
+    @media (min-width: breakpoint($name)) {
+        @content;
+    }
 }
 
 // Mixin for setting hover behavior on video player controls button

@@ -31,18 +31,13 @@
     <Content Include=".gitignore" />
     <Content Include=".pipelines\azure-pipelines.yml" />
     <Content Include=".stylelintrc.json" />
-    <Content Include="css\app.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\mobile-web.css">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="scss\base\app.scss" />
     <Content Include="scss\components\_modal.scss" />
     <Content Include="scss\components\_navigation.scss" />
     <Content Include="scss\components\_pricing-calculator.scss" />
     <Content Include="scss\components\_slideout.scss" />
     <Content Include="scss\components\_video-player.scss" />
+    <Content Include="scss\functions\_function.scss" />
     <Content Include="scss\helper\_non-western.scss" />
     <Content Include="scss\helper\_text-helpers.scss" />
     <Content Include="scss\helper\_typography.scss" />
@@ -85,15 +80,6 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="css\site.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\variants\variation-a.css">
-      <SubType>Code</SubType>
-    </Content>
-    <Content Include="css\variants\variation-b.css">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="src\styles\ImportAppVariations.js">
       <SubType>Code</SubType>
     </Content>
@@ -123,8 +109,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\variants\mobile-variants\" />
-    <Folder Include="css\variants\app-variants\" />
     <Folder Include="dist\" />
     <Folder Include=".pipelines\" />
     <Folder Include="scss\" />
@@ -145,8 +129,6 @@
     <Folder Include="scss\text-direction\" />
     <Folder Include="scss\variables\" />
     <Folder Include="src\ab-testing\" />
-    <Folder Include="css\" />
-    <Folder Include="css\variants\" />
     <Folder Include="src\" />
     <Folder Include="src\utils\" />
     <Folder Include="src\styles\" />

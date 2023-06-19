@@ -1,21 +1,19 @@
 /**
-Variables
-*/
+ * Variables
+ */
 
-// Background color for the banner
+// Banner
 $banner-background-color: lightblue;
 
-// Background color for the active navigation tab
+// Navigation
 $nav-active-background-color: blue;
-
-// Text color for the active navigation tab
 $nav-active-text-color: white;
 
-// Overlay variables
+// Overlay
 $overlay-background-color: rgba(0, 0, 0, 0.5);
 $overlay-z-index: 9999;
 
-// Modal variables
+// Modal
 $modal-background-color: #fff;
 $modal-border-radius: 4px;
 $modal-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -51,3 +49,6 @@ $login-options-link-border-radius: 5px;
 $login-options-link-background-color: transparent;
 $login-options-link-transition-duration: 0.3s;
 $login-options-link-transition-timing-function: ease;
+
+// Add comments for further clarification if needed
+// ...
